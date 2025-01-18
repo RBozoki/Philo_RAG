@@ -8,7 +8,6 @@ INDEX_STORAGE_PATH = 'index_ls_v1'
 # Fonction pour charger ou créer un index
 def get_index():
     if os.path.exists(INDEX_STORAGE_PATH):
-        st.write("Chargement de l'index existant...")
         storage_context = StorageContext.from_defaults(persist_dir=INDEX_STORAGE_PATH)
         return load_index_from_storage(storage_context)
     else:
@@ -25,7 +24,7 @@ index = get_index()
 st.title("Recherche dans les textes philosophiques")
 
 # Zone de texte pour saisir une requête
-query = st.text_input("Saisissez votre question :", "Dois-je agir avec honneur ?")
+query = st.text_input("Saisissez votre question :", "")
 
 # Traitement de la requête si l'utilisateur clique sur le bouton
 if st.button("Lancer la requête"):

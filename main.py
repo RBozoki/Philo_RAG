@@ -3,7 +3,7 @@ from llama_index.core import SimpleDirectoryReader, GPTVectorStoreIndex, Storage
 import os
 
 # Définir le chemin pour stocker l'index
-INDEX_STORAGE_PATH = 'index_v1'
+INDEX_STORAGE_PATH = 'index_ls_v1'
 
 # Fonction pour charger ou créer un index
 def get_index():
